@@ -4,27 +4,16 @@ read = sys.stdin.readline
 while(1):
   line = read()
   if line == ".\n": break
-  open_stack = []
-  result = "yes"
-
+  par = ""
   for char in line:
-    if char == "(" or char == "[":
-      open_stack.append(char)
-    elif char == ")" or char == "]":
-      if len(open_stack) == 0:
-        result = "no"
-        break
-      if char == ")":
-        if open_stack[-1] != "(":
-          result = "no"
-          break
-      if char == "]":
-        if open_stack[-1] != "[":
-          result = "no"
-          break
-      open_stack.pop()
+    if char in "()[]":
+      par += char
 
-  if len(open_stack) != 0:
-    result = "no"
-  print(result)
+  while par.find("()") + 1 or par.find("[]") + 1:
+    par = par.replace('()', '')
+    par = par.replace('[]', '')
   
+  if len(par):
+    print("no")
+  else:
+    print("yes")
