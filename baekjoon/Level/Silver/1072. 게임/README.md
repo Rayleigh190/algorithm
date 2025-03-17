@@ -8,5 +8,8 @@
 
 https://velog.io/@rayleigh_/99%ED%81%B4%EB%9F%BD-%EC%BD%94%ED%85%8C-%EC%8A%A4%ED%84%B0%EB%94%94-1%EC%9D%BC%EC%B0%A8-TIL-%EC%9D%B4%EB%B6%84%ED%83%90%EC%83%89
 
+## 시간복잡도
+이분탐색 : O(log n)
+
 # To Remember
 \-
